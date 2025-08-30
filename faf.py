@@ -4,7 +4,7 @@ import os
 import uuid
 
 BASE_URL = "https://filebin.net"
-folder_path= "E:\\New folder"
+
 def upload_folder(folder_path):
     if not os.path.isdir(folder_path):
         print("❌ Not a folder:", folder_path)
@@ -28,9 +28,9 @@ def upload_folder(folder_path):
 
     print("\n🔗 Bin link:", f"{BASE_URL}/{bin_id}")
 
-# if __name__ == "__main__":
-#     if len(sys.argv) != 2:
-#         print(f"Usage: python3 {sys.argv[0]} <folder_path>")
-#         sys.exit(1)
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print(f"Usage: python3 {sys.argv[0]} <folder_path>")
+        sys.exit(1)
 
-upload_folder(folder_path)
+    upload_folder(sys.argv[1])
